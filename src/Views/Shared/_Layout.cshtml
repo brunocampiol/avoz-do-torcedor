@@ -1,4 +1,4 @@
-﻿@inject IOptionsSnapshot<BlogSettings> settings
+@inject IOptionsSnapshot<BlogSettings> settings
 @inject WebManifest manifest
 @{
     var host = $"{Context.Request.Scheme}://{Context.Request.Host}";
@@ -41,10 +41,17 @@
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 
+    @*    <header class="siteheader">
+        <div class="container">
+        <p itemprop="name"><a href="~/" itemprop="url">@manifest.Name</a></p>
+        By <span itemprop="author">@settings.Value.Owner</span>
+        </div>
+        </header>*@
+
+
     <header class="siteheader">
         <div class="container">
-            <p itemprop="name"><a href="~/" itemprop="url">@manifest.Name</a></p>
-            By <span itemprop="author">@settings.Value.Owner</span>
+            <p itemprop="name"><a href="~/" itemprop="url">A Voz do Torcedor</a></p>
         </div>
     </header>
 
